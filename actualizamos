@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunión de Mayca Salmerón Martínez</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f8d3e0, #a0d8e1);
+        }
+        header {
+           background: linear-gradient(to right, #f8d3e0, #a0d8e1);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background-image: url('https://images.unsplash.com/photo-1516728778615-2d8c3b1b3c1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHN0YXJ8ZW58MHx8fHwxNjg0MjY0MjY0&ixlib=rb-1.2.1&q=80&w=1080'); /* Fondo de estrellas */
+            background-size: cover; /* Ajustar el tamaño del fondo */
+            background-repeat: no-repeat; /* No repetir la imagen */
+        }
+        .column {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 50px;
+            background: rgba(255, 255, 255, 0.3); /* Fondo blanco semitransparente */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para un efecto elegante */
+        }
+        .column.left {
+            left: 0;
+        }
+        .column.right {
+            right: 0;
+        }
+        header img {
+            max-width: 30%;
+            height: auto;
+            margin: 0 20px; /* Espacio entre la imagen y el texto */
+        }
+        .stars {
+            position: absolute;
+            top: 10px; /* Ajusta la posición vertical de las estrellas */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5em; /* Tamaño de las estrellas */
+            color: gold; /* Color de las estrellas */
+        }
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+            background: white;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #f28db0; /* Rosa más intenso */
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea, select {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #f28db0; /* Rosa más intenso */
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #d67a9a; /* Rosa más oscuro al pasar el ratón */
+        }
+        .allergy-details {
+            display: none; /* Ocultar por defecto */
+        }
+    </style>
+    <script>
+        function toggleAllergyDetails() {
+            const allergySelect = document.getElementById('allergy-type');
+            const allergyDetails = document.getElementById('allergy-details');
+            const allergyLabel = document.getElementById('allergy-label');
+
+            if (allergySelect.value === 'alergia') {
+                allergyLabel.textContent = 'Especifica a qué eres alérgico:';
+                allergyDetails.style.display = 'block';
+            } else if (allergySelect.value === 'intolerancia') {
+                allergyLabel.textContent = 'Especifica a qué eres intolerante:';
+                allergyDetails.style.display = 'block';
+            } else {
+                allergyDetails.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <div class="column left"></div>
+    <div class="column right"></div>
+    <img src="./mayca.png.jpg" alt="Celebración de Comunión">
+    <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+    </div>
+    <div>
+        <h1>Comunión de Mayca Salmerón Martínez</h1>
+        <p>Te invitamos a celebrar este día tan especial</p>
+    </div>
+    <div style="margin-top: 10px;">
+        <i class="fas fa-cross" style="font-size: 1.5em; color: white; margin-right: 10px;"></i>
+        <i class="fas fa-dove" style="font-size: 1.5em; color: white;"></i>
+    </div>
+</header>
+
+<section>
+    <h2>Ceremonia</h2>
+    <p>La ceremonia se llevará a cabo el día 3/05/2025 a las 11:00 en la parroquia Santa Victoria, barrio Naranjo, Córdoba.</p>
+</section>
+
+<section>
+    <h2>Celebración</h2>
+    <p>Después de la ceremonia, te invitamos a una celebración en Bar casa Ramón , en camino la barquera a partir de las 14:00h.</p>
+</section>
+
+<section>
+    <h2>Confirmación de Asistencia y Contacto</h2>
+    <form action="https://formspree.io/f/mnnqngvb" method="POST">
+        <label for="guest-name">Nombre:</label>
+        <input type="text" id="guest-name" name="guest-name" required>
+        
+        <label for="attendance">¿Vas a asistir a la comunión?</label>
+        <select id="attendance" name="attendance" required>
+            <option value="">Selecciona una opción</option>
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+        </select>
+        
+        <label for="allergy-type">¿Tienes alergias o intolerancias?</label>
+        <select id="allergy-type" name="allergy-type" onchange="toggleAllergyDetails()">
+            <option value="">Selecciona una opción</option>
+            <option value="alergia">Alergia</option>
+            <option value="intolerancia">Intolerancia</option>
+            <option value="ninguna">Ninguna</option>
+        </select>
+        
+        <div id="allergy-details" class="allergy-details">
+            <label id="allergy-label" for="allergy-details-input">Especifica a qué eres alérgico o intolerante:</label>
+            <input type="text" id="allergy-details-input" name="allergy-details-input">
+        </div>
+        
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 Comunión de Mayca Salmerón Martínez. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
